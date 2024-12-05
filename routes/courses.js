@@ -4,6 +4,7 @@ const { courseModel } = require('../db');
 const { purchaseModel } = require('../db');
 const courseRouter = Router();
 
+//this will let you purchase the course
 courseRouter.post('/purchase/',userMiddleware, async function(req,res){
     const userId = req.userId;
     const courseId = req.body.courseId;

@@ -77,6 +77,8 @@ userRouter.post('/signin',async function(req,res){
 
 })
 
+
+//this will let user see their purchases 
 userRouter.get('/purchases',userMiddleware,async function(req,res){
     const userId = req.userId;
 

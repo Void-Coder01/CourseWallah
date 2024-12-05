@@ -78,6 +78,7 @@ adminRouter.post('/signin',async function(req,res){
 
 })
 
+//this will create course
 adminRouter.post('/course', adminMiddleware,async function(req,res){
     const userId = req.userId;//userId token k through mil rhi h 
 
@@ -99,11 +100,12 @@ adminRouter.post('/course', adminMiddleware,async function(req,res){
     
 })
 
+//this will update the course
 adminRouter.put('/courses',adminMiddleware, async function(req,res){
         const adminId = req.userId;
         const courseId = req.body.courseId;
 
-        const { title, description, price, imageURL} = req.body;
+        const { title, description, price, imageURL } = req.body;
 
         const isValid = await courseModel.findOne({
             _id : courseId,
@@ -151,7 +153,7 @@ adminRouter.put('/courses',adminMiddleware, async function(req,res){
 
 })
 
-//user specific jitna course create kiya h voh sab h
+//user specific jitna course create kiya h voh sab dekna ho toh
 adminRouter.get('/course/bulk',adminMiddleware, async function(req,res){
     const adminId = req.userId;
 
