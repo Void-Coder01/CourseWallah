@@ -26,7 +26,7 @@ userRouter.post('/signup',async function(req,res){
     }
 
 
-   const { firstName, lastName, email, password} = req.body;
+   const { firstName, lastName, email, password } = req.body;
 
     const hashedPassword = await bcrypt.hash(password,5);
 

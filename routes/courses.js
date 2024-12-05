@@ -45,7 +45,7 @@ courseRouter.post('/purchase/',userMiddleware, async function(req,res){
 //returns all the courses
 courseRouter.get('/preview',async function(req,res){
 
-    const course = await courseModel.find({});
+    const course = await courseModel.find({});//jitna bhi h sab kuch de dega 
 
     res.json({
         courses : course

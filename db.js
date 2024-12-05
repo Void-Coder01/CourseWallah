@@ -3,12 +3,6 @@
     const ObjectID = mongoose.Types.ObjectId; 
     require('dotenv').config({path :'./security.env' });
 
-    const mongoURI = process.env.MONGO_URI;
-
-    mongoose.connect(mongoURI)
-        .then(()=>{console.log("connected to DB succesfully")})
-        .catch((e) => {console.log("Error occurred while connecting to DB \n",e)});
-
     const userSchema = new Schema({
         firstName : String,
         lastName : String,
@@ -28,12 +22,12 @@
         description : String,
         price : Number,
         imageURL : String,
-        creatorID : ObjectID
+        creatorID : ObjectID//kis admin ne yeh course bnaya h 
     })
 
     const PurchaseSchema = new Schema({
-        courseID : ObjectID,
-        userID : ObjectID
+        courseID : ObjectID,//konsa course kharida h
+        userID : ObjectID//kis user ne khrida h
     })
 
 

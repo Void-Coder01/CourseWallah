@@ -151,6 +151,7 @@ adminRouter.put('/courses',adminMiddleware, async function(req,res){
 
 })
 
+//user specific jitna course create kiya h voh sab h
 adminRouter.get('/course/bulk',adminMiddleware, async function(req,res){
     const adminId = req.userId;
 
